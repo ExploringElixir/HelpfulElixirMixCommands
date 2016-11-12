@@ -1,0 +1,24 @@
+
+Helpful commands for working with Elixir Mix projects
+----------
+
+
+# Compile Mix app for different environments
+
+On Ubuntu:
+$ MIX_ENV=prod mix compile
+
+On Windows:
+> set "MIX_ENV=prod" && mix compile
+
+
+# Create a Mix app with supervision tree
+mix new my_app --module MyApp --sup
+
+
+# Create Phoenix Web app without brunch and using mysql database
+mix phoenix.new todolist --no-brunch --database mysql
+
+
+# Auto-generate resource
+mix phoenix.gen.html TodoItem todoitem name:string description:text is_done:boolean
